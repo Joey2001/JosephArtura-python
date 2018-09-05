@@ -1,4 +1,4 @@
-Pika = " (\\__/)\n (*^.^)\nz(_(\")(\")\n"
+Pikachu = " (\\__/)\n (*^.^)\nz(_(\")(\")\n"
 Pika1 = "  (\\__/) "
 Pika2 = "  (*^.^) "
 Pika3 = "z(_(\")(\")"
@@ -17,8 +17,10 @@ print("hello") # This is a comment
 #    print(my_String[0:x])
 #for i in range(200):
 #    print(Pika)
-Pikas = 2
-Pikus = 2
+Input = input("What is your first value: ")
+Imput = input("What is your second value: ")
+Pikas = int(Input)
+Pikus = int(Imput)
 for i in range(Pikus):
     print(Pikas * Pika1)
     print(Pikas * Pika2)
