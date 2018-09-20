@@ -1,19 +1,15 @@
-num = [4,9,15,60]
-def Double():
-   global num_Two
-   num_Two = [i * 2 for i in num]
-   print(num)
-   print(num_Two)
 
-def TripleDouble():
-    global num_Three
-    num_Three = [i * 3 for i in num_Two]
-    print(num_Three)
+def changeNumbers(list, multiplier, expon):
+    for i in range(len(list)):
+        list[i] = (list[i]**expon) * multiplier
+    return list
 
-def Exponential():
-    num_Four = [i**2 for i in num_Three]
-    print(num_Four)
-
-Double()
-TripleDouble()
-Exponential()
+e = 3
+results = changeNumbers([2,3,4,5], 2, e)
+print(results)
+print()
+results = changeNumbers(results, 3, e)
+print(results)
+print()
+results = changeNumbers(results, 10, e)
+print(results)
