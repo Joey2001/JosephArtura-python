@@ -1,8 +1,7 @@
 import random
 
 def myFunc(x,y):
-    print(x)
-    print(y)
+    print(x, y)
 
 i = 6
 j = 10
@@ -14,7 +13,7 @@ def calcGrade(grade):
     return "You have been in school for",grade,"years"
 
 def City(city, year):
-    print("You live in",city,"and you are in grade", year)
+    return ("You live in", city,"and are in grade", year)
 
 def Recieving(z):
     return z
@@ -42,4 +41,4 @@ print(mySchool())
 
 print(calcGrade(int(input("What grade are you in? - "))))
 
-City(input("What city do you live in? - ", int(input("What grade are you in? - "))))
+print(City(input("What city do you live in? - "), int(input("What grade are you in? - "))))
