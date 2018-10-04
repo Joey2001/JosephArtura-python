@@ -19,10 +19,13 @@ def main():
         print("Your letter grade is", Letter(average))
 
 def Grade(grades):
-    #defines average as elements of the list grades
-    average = float(((grades[0]+grades[1]+grades[2]+grades[3])/len(grades)))
-    #returns average to the function main
-    return average
+    #initialize the variable average
+    average = 0
+    #sets average to previous sum, so makes summation
+    for i in range(len(grades)):
+        average = average + float(grades[i])
+    #returns the average by taking the number from the for loop and dividing by the length of the list
+    return average/len(grades)
 
 def Year(year):
     #tests if you are in high school or not, and specifies if you are a Freshman, Sophomore, Junior, or Senior
