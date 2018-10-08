@@ -1,6 +1,8 @@
 def main():
     #list of predefined grades
-    grades = [86.8,67.6,98.9,92.1]
+    #grades = [86.8,67.6,98.9,92.1]
+    num = int(input("How many grades? - "))
+    grades = getGrade(num)
     #shortcut for the function Grade
     average = Grade(grades)
     #input for what school
@@ -17,6 +19,18 @@ def main():
         print("Your average grade is", average)
         #gives you a letter grade based on the average
         print("Your letter grade is", Letter(average))
+
+def getGrade(num):
+    #intialize the list
+    grades = []
+    #appends the list for a certain range
+    for i in range(num):
+        #input number to add to the list
+        myNum = float(input("What is the grade? - "))
+        #adds the number to the list
+        grades.append(myNum)
+    #returns the grades as a list
+    return grades
 
 def Grade(grades):
     #initialize the variable average
