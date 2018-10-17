@@ -3,6 +3,7 @@ def main():
     print(allInOne(shoppingCart))
     print("Q-tips appear", countQtips(shoppingCart), "times")
     print(drinkMoreMilk(shoppingCart))
+    print(mooseCookie(shoppingCart))
 
 def allInOne(cart):
     newList = []
@@ -31,4 +32,11 @@ def drinkMoreMilk(cart):
                 list.append('milk')
     return cart
 
+def mooseCookie(cart):
+    for list in cart:
+        for item in list:
+            if 'milk' in list:
+                list.remove('milk')
+                list.append('milk and cookies')
+    return cart
 main()
