@@ -1,6 +1,6 @@
 def main():
     numbers = [23,46,46,78]
-    multiply = 9;
+    multiply = int(input("Multiply by - "))
     string = input("Now type - ")
     print(deVowel(string))
     print(mathStuff(numbers, multiply))
@@ -14,7 +14,7 @@ def deVowel(myString):
     return newStr
 def mathStuff(num, multiply):
     for i in range(len(num)):
-        num[i] = num[i] * multiply
+        num[i] *= multiply
     return num
 
 main()
