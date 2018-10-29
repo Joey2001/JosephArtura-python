@@ -1,16 +1,20 @@
 import random
+DICENUM = 2
 def main():
     count = 1
-    dicePrint(randInt())
+    dicePrint(constructDice())
     while((input("Do you want to play again? (\'y\' or \'n\') - ") == 'y')):
-        dicePrint(randInt())
+        diceSet = []
+        for i in range(DICENUM):
+            diceSet = randInt()
+        dicePrint(diceSet)
         count += 1
     if(count > 1):
         print("You have played", count, "times.")
     else:
         print("You have played one time.")
 
-def dicePrint(diceNum):
+def constructDice():
     topBottom = ' ------- '
     leftOne =   '| *     |'
     middleOne = '|   *   |'
@@ -24,10 +28,13 @@ def dicePrint(diceNum):
     Five = [topBottom, middleTwo, middleOne, middleTwo, topBottom]
     Six = [topBottom, middleTwo, middleTwo, middleTwo, topBottom]
     allDice = [One, Two, Three, Four, Five, Six]
-    for dice in range(0, len(allDice[0])):
-        for side in range(0, len(allDice)):
+    return allDice
+def dicePrint(allDice):
+    for dice in range(len(allDice[0])):
+        for side in range(len(allDice)):
             print(allDice[side][dice], end = '\t')
         print()
+
 
 def randInt():
     return random.randint(0,5)
