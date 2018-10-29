@@ -1,18 +1,21 @@
 import random
 DICENUM = 2
 def main():
-    count = 1
-    dicePrint(constructDice())
+    count = 0
+    setOfDice = constructDice()
     while((input("Do you want to play again? (\'y\' or \'n\') - ") == 'y')):
-        diceSet = []
+        diceSet = [0] * DICENUM
         for i in range(DICENUM):
-            diceSet = randInt()
+            roll = randInt()
+            diceSet[i] = setOfDice[roll]
         dicePrint(diceSet)
         count += 1
     if(count > 1):
         print("You have played", count, "times.")
-    else:
+    elif(count == 1):
         print("You have played one time.")
+    else:
+        print("You have not played.")
 
 def constructDice():
     topBottom = ' ------- '
