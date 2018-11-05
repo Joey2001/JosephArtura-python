@@ -4,7 +4,7 @@ def main():
     count = 0
     limit = int(input("How many times do you want to roll each dice? - "))
     countDice = []
-    play = 'y'
+    #play = 'y'
     setOfDice = constructDice()
     while(count < limit):
         diceSet = [0] * DICENUM
@@ -19,7 +19,7 @@ def main():
     print(addSets)
     print(countDice)
     numberCount(countDice)
-        #play = input("Do you want to play again? (\'y\' or \'n\') - ")
+    #play = input("Do you want to play again? (\'y\' or \'n\') - ")
     if(count > 1):
         print("You have rolled", count, "times.")
     elif(count == 1):
@@ -49,7 +49,10 @@ def numberCount(countDice):
         count[countDice[i] -1] += 1
 
     for i in range((DICENUM - 1), DICENUM * 6):
-        print("You have rolled a", (i + 1), "-", count[i], "times.")
+        if(count[i] != 1):
+            print("You have rolled a", (i + 1), "-", count[i], "times.")
+        if(count[i] == 1):
+            print("You have rolled a", (i + 1), "- 1 time.")
 
 def dicePrint(allDice):
     for dice in range(len(allDice[0])):
